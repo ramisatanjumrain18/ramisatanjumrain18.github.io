@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <title>Ramisa Tanjum Rain | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <style>
     body {
       margin: 0;
@@ -25,7 +22,25 @@
       position: relative;
     }
 
-    /* Rain effect */
+    .nav {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    .nav a {
+      color: #00bfff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    .nav a:hover {
+      color: white;
+    }
+
     .rain {
       position: fixed;
       top: 0;
@@ -52,7 +67,6 @@
       }
     }
 
-    /* Sparkling name */
     .sparkle {
       font-size: 36px;
       background: linear-gradient(90deg, #00ffff, #ffffff, #00ffff);
@@ -85,7 +99,6 @@
       border: none;
       border-radius: 8px;
       text-decoration: none;
-      position: relative;
       z-index: 1;
     }
 
@@ -97,7 +110,7 @@
       display: flex;
       justify-content: center;
       gap: 20px;
-      flex-wrap: wrap;
+      margin-top: 20px;
       z-index: 1;
     }
 
@@ -121,6 +134,14 @@
   <!-- Rain animation -->
   <div class="rain" id="rain"></div>
 
+  <!-- Navigation bar -->
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="certificates.html">Certificates</a>
+    <a href="skills.html">Skills</a>
+    <a href="research.html">Research</a>
+  </div>
+
   <!-- Main content -->
   <h1 class="sparkle">RAMISA TANJUM RAIN</h1>
   <h2>Civil Engineer | Water Resources Engineer | Researcher</h2>
@@ -136,10 +157,8 @@
     <a href="https://www.linkedin.com/in/ramisa-tanjum-rain-9797b1347" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
   </div>
 
-  <!-- JavaScript to generate raindrops -->
   <script>
     const rainContainer = document.getElementById('rain');
-
     for (let i = 0; i < 100; i++) {
       const drop = document.createElement('div');
       drop.classList.add('drop');
@@ -153,3 +172,10 @@
 </body>
 </html>
 
+
+      
+    
+   
+      
+   
+ 
