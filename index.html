@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Ramisa Tanjum Rain | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Font Awesome for Icons -->
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -23,7 +23,6 @@
       position: relative;
     }
 
-    /* RAIN ANIMATION */
     .rain {
       position: fixed;
       top: 0;
@@ -89,36 +88,38 @@
       background-color: #007acc;
     }
 
-    /* NAV BOXES */
+    /* Nav Tabs as Transparent Boxes */
     .nav-boxes {
       display: flex;
       justify-content: center;
       gap: 20px;
-      margin-top: 30px;
+      margin: 30px 0 10px;
       flex-wrap: wrap;
       z-index: 1;
     }
 
     .nav-boxes a {
-      background-color: #1e90ff;
-      padding: 12px 20px;
+      padding: 10px 20px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
       color: white;
       text-decoration: none;
-      border-radius: 12px;
+      background: transparent;
       font-weight: bold;
-      transition: background 0.3s ease;
+      transition: 0.3s;
     }
 
     .nav-boxes a:hover {
-      background-color: #00bfff;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #00ffff;
     }
 
-    /* SOCIAL ICONS */
+    /* Social icons closer to nav */
     .socials {
       display: flex;
       justify-content: center;
       gap: 25px;
-      margin-top: auto;
+      margin-top: 20px;
       margin-bottom: 30px;
       z-index: 1;
     }
@@ -143,18 +144,18 @@
   <!-- Rain background -->
   <div class="rain" id="rain"></div>
 
-  <!-- Main Content -->
+  <!-- Main content -->
   <h1 class="sparkle">RAMISA TANJUM RAIN</h1>
   <h2>Civil Engineer | Water Resources Engineer | Researcher</h2>
 
   <a class="btn" href="CV ramisa tanjum rain.pdf" download>📄 Download CV</a>
 
-  <!-- Page Navigation Boxes -->
+  <!-- Transparent Navigation Tabs -->
   <div class="nav-boxes">
-    <a href="index.html">🏠 Home</a>
-    <a href="skills.html">🛠 Skills</a>
-    <a href="certificates.html">📜 Certificates</a>
-    <a href="research.html">📚 Research</a>
+    <a href="index.html">Home</a>
+    <a href="skills.html">Skills</a>
+    <a href="certificates.html">Certificates</a>
+    <a href="research.html">Research</a>
   </div>
 
   <!-- Social Media Icons -->
