@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title> Ramisa Tanjum Rain | Portfolio</title>
+  <title>Ramisa Tanjum Rain | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       margin: 0;
@@ -21,7 +25,7 @@
       position: relative;
     }
 
-    /* RAIN DROPS */
+    /* Rain effect */
     .rain {
       position: fixed;
       top: 0;
@@ -48,7 +52,7 @@
       }
     }
 
-    /* SPARKLING TEXT */
+    /* Sparkling name */
     .sparkle {
       font-size: 36px;
       background: linear-gradient(90deg, #00ffff, #ffffff, #00ffff);
@@ -99,42 +103,40 @@
 
     .socials a {
       text-decoration: none;
-      font-size: 16px;
-      color: #00bfff;
     }
 
-    .socials a:hover {
-      color: #ffffff;
+    .socials i {
+      font-size: 24px;
+      color: #00bfff;
+      transition: color 0.3s ease;
+    }
+
+    .socials i:hover {
+      color: white;
     }
   </style>
 </head>
 <body>
 
-  <!-- Rain Layer -->
+  <!-- Rain animation -->
   <div class="rain" id="rain"></div>
 
-  <!-- Main Content -->
+  <!-- Main content -->
   <h1 class="sparkle">RAMISA TANJUM RAIN</h1>
   <h2>Civil Engineer | Water Resources Engineer | Researcher</h2>
 
   <a class="btn" href="CV ramisa tanjum rain.pdf" download>📄 Download CV</a>
-<div style="margin-bottom: 20px; z-index:1;">
-  <a href="index.html" style="margin: 0 10px; color: #00bfff;">Home</a> |
-  <a href="research.html" style="margin: 0 10px; color: #00bfff;">Research</a> |
-  <a href="certificates.html" style="margin: 0 10px; color: #00bfff;">Certificates</a> |
-  <a href="awards.html" style="margin: 0 10px; color: #00bfff;">Awards</a>
-</div>
 
+  <!-- Social Media Icons -->
   <div class="socials">
-  <a href="mailto:ramisatanjumrain18@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-  <a href="http://www.youtube.com/@rainn3093" target="_blank"><i class="fab fa-youtube"></i></a>
-  <a href="https://facebook.com/ra.inn.58" target="_blank"><i class="fab fa-facebook"></i></a>
-  <a href="https://www.instagram.com/ramisa_tanjum_rain/" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.linkedin.com/in/ramisa-tanjum-rain-9797b1347" target="_blank"><i class="fab fa-linkedin"></i></a>
-</div>
+    <a href="mailto:ramisatanjumrain18@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.youtube.com/@rainn3093" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.facebook.com/ra.inn.58/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/ramisa_tanjum_rain/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/ramisa-tanjum-rain-9797b1347" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  </div>
 
-
-  <!-- JavaScript for rain drops -->
+  <!-- JavaScript to generate raindrops -->
   <script>
     const rainContainer = document.getElementById('rain');
 
@@ -151,4 +153,3 @@
 </body>
 </html>
 
-      
