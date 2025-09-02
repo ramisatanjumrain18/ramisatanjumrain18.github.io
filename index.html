@@ -1,158 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Ramisa Tanjum Rain | Research</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    /* ====== Main style (keep graphics) ====== */
     body {
       margin: 0;
       padding: 0;
       min-height: 100vh;
       background: #000;
-      overflow-x: hidden;
       font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       color: white;
       text-align: center;
-      position: relative;
     }
 
-    .rain {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 0;
-    }
-
-    .drop {
-      position: absolute;
-      bottom: 100%;
-      width: 2px;
-      height: 15px;
-      background: rgba(255, 255, 255, 0.3);
-      animation: fall linear infinite;
-    }
-
-    @keyframes fall {
-      to {
-        transform: translateY(100vh);
-        opacity: 0;
-      }
-    }
-
-    .sparkle {
+    h1 {
       font-size: 36px;
-      margin-top: 80px;
+      margin-top: 40px;
       background: linear-gradient(90deg, #00ffff, #ffffff, #00ffff);
       background-size: 200%;
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      animation: sparkleAnim 3s infinite linear;
-      z-index: 1;
+      animation: sparkle 3s linear infinite;
     }
 
-    @keyframes sparkleAnim {
+    @keyframes sparkle {
       0% { background-position: 0% }
       100% { background-position: 200% }
     }
 
     h2 {
-      font-size: 18px;
       color: #ccc;
-      margin: 10px 0 20px;
-      z-index: 1;
+      font-size: 18px;
+      margin: 10px 0 30px;
     }
 
-    .btn {
-      padding: 12px 24px;
-      font-size: 16px;
-      color: white;
-      background-color: #00bfff;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      z-index: 1;
-    }
-
-    .btn:hover {
-      background-color: #007acc;
-    }
-
-    /* Navigation */
     .nav-boxes {
       display: flex;
       justify-content: center;
       gap: 20px;
-      margin: 30px 0 10px;
       flex-wrap: wrap;
-      z-index: 1;
+      margin-bottom: 40px;
     }
 
     .nav-boxes a {
       padding: 10px 20px;
-      border: 2px solid rgba(255, 255, 255, 0.5);
+      border: 2px solid rgba(255,255,255,0.5);
       border-radius: 10px;
       color: white;
       text-decoration: none;
-      background: transparent;
       font-weight: bold;
       transition: 0.3s;
     }
 
     .nav-boxes a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: rgba(255,255,255,0.2);
       color: #00ffff;
     }
 
-    /* Social icons */
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 20px;
-      margin-bottom: 30px;
-      z-index: 1;
-    }
-
-    .socials a {
-      text-decoration: none;
-    }
-
-    .socials i {
-      font-size: 24px;
-      color: #00bfff;
-      transition: color 0.3s ease;
-    }
-
-    .socials i:hover {
-      color: white;
-    }
-
-    /* Research Section */
     .research-container {
-      width: 100%;
-      max-width: 980px;
-      margin: 30px auto 80px;
+      max-width: 1000px;
+      margin: auto;
       padding: 0 16px;
-      z-index: 1;
-    }
-
-    .research-heading {
-      text-align: left;
-      color: #ccc;
-      margin: 10px 0 14px;
-      font-size: 16px;
     }
 
     .research-grid {
@@ -164,21 +77,21 @@
     .paper-card {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.06);
-      padding: 14px;
       border-radius: 12px;
+      padding: 14px;
       text-align: left;
     }
 
     .paper-card h3 {
-      margin: 0 0 6px;
       color: #00ffff;
       font-size: 16px;
+      margin-bottom: 6px;
     }
 
     .paper-card p {
-      margin: 0 0 10px;
       color: #ddd;
       font-size: 13px;
+      margin-bottom: 10px;
     }
 
     .actions a {
@@ -193,25 +106,31 @@
       font-size: 13px;
     }
 
-    .actions a:hover { background: #00bfff; border-color: #00bfff; }
-
-    @media (max-width:520px) {
-      .sparkle { font-size: 28px; margin-top: 60px; }
-      .nav-boxes a { padding: 8px 14px; font-size: 14px; }
+    .actions a:hover { 
+      background: #00bfff; 
+      border-color: #00bfff; 
     }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 40px 0 60px;
+    }
+
+    .socials i {
+      font-size: 24px;
+      color: #00bfff;
+      transition: color 0.3s ease;
+    }
+
+    .socials i:hover { color: white; }
   </style>
 </head>
 <body>
 
-  <!-- Rain background -->
-  <div class="rain" id="rain"></div>
-
-  <!-- Header -->
-  <h1 class="sparkle">RAMISA TANJUM RAIN</h1>
+  <h1>RAMISA TANJUM RAIN</h1>
   <h2>Civil Engineer | Water Resources Engineer | Researcher</h2>
-
-  <!-- CV download button -->
-  <a class="btn" href="CV ramisa tanjum rain.pdf" download>📄 Download CV</a>
 
   <!-- Navigation -->
   <div class="nav-boxes">
@@ -223,8 +142,6 @@
 
   <!-- Research Section -->
   <div class="research-container">
-    <div class="research-heading"><strong>Research —</strong> open or download my papers</div>
-
     <div class="research-grid">
 
       <div class="paper-card">
@@ -286,5 +203,12 @@
 
   <!-- Social icons -->
   <div class="socials">
-    <a href="mailto:ramisatanjumrain18@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
-    <a href="https://www.youtube.com/@rainn3093" target="_blank
+    <a href="mailto:ramisatanjumrain18@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.youtube.com/@rainn3093" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.facebook.com/ra.inn.58/" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/ramisa_tanjum_rain/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/ramisa-tanjum-rain-9797b1347" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+
+</body>
+</html>
